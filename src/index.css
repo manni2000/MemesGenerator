@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  height: auto;
+  font-family: "Karla", sans-serif;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #ff0000, #daf35b 100%);
+  display: flex;
+  height: 65px;
+  padding: 20px;
+  color: #fff;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar img {
+  height: 100%;
+}
+
+.navbar h2 {
+  font-size: 3.5rem;
+  text-align: center;
+ margin-right: 500px;
+}
+
+.navbar h4 {
+  padding-left: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+header {
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.form > span {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 40px;
+}
+
+
+.form-input {
+  width: 45%;
+  font-family: "Karla", sans-serif;
+  border-radius: 5px;
+  border: 1px solid black;
+  text-indent: 5px;
+}
+
+.form-button {
+  height: 40px;
+  max-width: 100%;
+  font-family: "Karla", sans-serif;
+  background: linear-gradient(90deg, #7f00ff, #e100ff 100%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.form-button:hover {
+  box-shadow: 0 4px 8px 0 rgba(13, 206, 245, 0.2), 0 6px 20px 0 rgba(25, 208, 237, 0.19);
+}
+
+.form-button:active {
+  background: linear-gradient(90deg, #e100ff, #7f00ff 100%);
+  border: 1px solid black;
+}
+
+.meme {
+  margin-top: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.meme--image {
+  border-radius: 3px;
+  max-height: 50vh;
+  box-shadow: 1px 1px 2px 1px grey;
+}
+
+.meme--text {
+  position: absolute;
+  max-width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
+    2px 2px 5px #000;
+}
+
+.bottom {
+  bottom: 0;
+}
+
+.top {
+  top: 0;
+}
+
+.form-input:focus {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border-style: solid;
+  border-width: 3px;
+  border-color: skyblue;
+  list-style: none;
+  outline: none;
+}
+
+.download {
+  align-items: center;
+  width: 400px;
+  height: 40px;
+  margin: 10px;
+  /* background: linear-gradient(90deg, #ff0000, #daf35b 100%); */
+  color: rgb(15, 15, 15);
+}
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px;
+}
+
+@media screen and (max-width: 700px) {
+  .meme--image {
+    max-width: 90%;
+  }
+}
