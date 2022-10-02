@@ -68,7 +68,7 @@ export default function Form() {
         <input
           type="text"
           className="form-input"
-          placeholder="Meme top text"
+          placeholder="Top text"
           name="topText"
           value={memeImage.topText}
           onChange={changeMeme}
@@ -76,7 +76,7 @@ export default function Form() {
         <input
           type="text"
           className="form-input"
-          placeholder="Meme bottom text"
+          placeholder="Bottom text"
           name="bottomText"
           value={memeImage.bottomText}
           onChange={changeMeme}
