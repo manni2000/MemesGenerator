@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap');
+
 body {
   margin: 0;
   height: auto;
-  font-family: "Karla", sans-serif;
+  font-family: 'Karla', sans-serif;
 }
 
 .navbar {
@@ -9,6 +11,7 @@ body {
   display: flex;
   height: 65px;
   padding: 20px;
+  padding-right: 80px;
   color: #fff;
   align-items: center;
   justify-content: space-between;
@@ -16,12 +19,13 @@ body {
 
 .navbar img {
   height: 100%;
+  max-width: 80px;
 }
 
 .navbar h2 {
   font-size: 3.5rem;
   text-align: center;
- margin-right: 500px;
+  width: 100%;
 }
 
 .navbar h4 {
@@ -57,33 +61,59 @@ header {
   height: 40px;
 }
 
+.text-inputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
 
 .form-input {
-  width: 45%;
-  font-family: "Karla", sans-serif;
+  width: 100%;
+  font-family: 'Karla', sans-serif;
   border-radius: 5px;
   border: 1px solid black;
   text-indent: 5px;
+  display: block;
 }
 
-.form-button {
+.download {
   height: 40px;
-  max-width: 100%;
-  font-family: "Karla", sans-serif;
+  font-family: 'Karla', sans-serif;
+  color: #fff;
   background: linear-gradient(90deg, #7f00ff, #e100ff 100%);
-  color: white;
   border: none;
   cursor: pointer;
-  margin: 10px;
+  margin: 10px 0;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
 }
 
-.form-button:hover {
-  box-shadow: 0 4px 8px 0 rgba(13, 206, 245, 0.2), 0 6px 20px 0 rgba(25, 208, 237, 0.19);
+.download:hover {
+  box-shadow: 0 4px 8px 0 rgba(13, 206, 245, 0.2),
+    0 6px 20px 0 rgba(25, 208, 237, 0.19);
 }
 
-.form-button:active {
+.download:active {
   background: linear-gradient(90deg, #e100ff, #7f00ff 100%);
   border: 1px solid black;
+}
+
+.refresh-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: 0;
+  cursor: pointer;
+  transition: opacity 0.2s linear;
+}
+
+.meme:hover .refresh-button {
+  opacity: 0.6;
+}
+.meme:hover .refresh-button:hover {
+  opacity: 1;
 }
 
 .meme {
@@ -97,6 +127,7 @@ header {
   border-radius: 3px;
   max-height: 50vh;
   box-shadow: 1px 1px 2px 1px grey;
+  max-width: 100%;
 }
 
 .meme--text {
@@ -135,16 +166,6 @@ header {
   outline: none;
 }
 
-.download {
-  align-items: center;
-  width: 400px;
-  height: 40px;
-  margin: 10px;
-  /* background: linear-gradient(90deg, #ff0000, #daf35b 100%); */
-  color: rgb(15, 15, 15);
-}
-
-
 main {
   display: flex;
   flex-direction: column;
@@ -153,8 +174,116 @@ main {
   padding: 40px;
 }
 
-@media screen and (max-width: 700px) {
-  .meme--image {
-    max-width: 90%;
+.footer-copyright {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.github-icon {
+  display: block;
+}
+
+.footer-copyright a {
+  color: #333;
+}
+
+/* RESPONSIVE */
+
+@media screen and (min-width: 600px) {
+  .meme .refresh-button {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    padding: 20px;
+  }
+
+  .navbar h2 {
+    font-size: 2rem;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .form > span {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .text-inputs {
+    flex-direction: column;
+  }
+
+  .form-input {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+  }
+
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+    background: linear-gradient(0deg, #ff0000, #daf35b 100%);
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .navbar h2 {
+    font-size: 1rem;
+  }
+}
+
+/* DARK MODE */
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #333;
+    color: #fefefe;
+  }
+  h2 {
+    color: #000;
+  }
+
+  .download:hover {
+    box-shadow: none;
+    font-weight: bold;
+  }
+  .form-input {
+    border-radius: 0;
+    background-color: transparent;
+    color: #fff;
+    border: 0;
+    box-shadow: none;
+    border-bottom: 1px solid;
+    outline: none;
+  }
+
+  .form-input::placeholder {
+    color: #fefefe;
+  }
+
+  .form-input:focus::placeholder {
+    opacity: 0;
+  }
+
+  .form-input:focus:active,
+  .form-input:focus,
+  .form-input:active {
+    border: 0;
+    border-bottom: 2px solid;
+    box-shadow: none;
+  }
+
+  .github-icon path {
+    fill: #fff;
+  }
+
+  .footer-copyright a {
+    color: #dddddd;
   }
 }
