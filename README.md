@@ -1,5 +1,5 @@
 ## MemesGenerator
-The **MemesGenerator** project is a web-based application designed to allow users to create, customize, and download memes. The application is hosted on Netlify and developed using HTML, CSS, and JavaScript, showcasing the simplicity and effectiveness of frontend web technologies.
+The **MemesGenerator** project is a web-based application designed to allow users to create, customize, and download memes. The application is hosted on Netlify and developed using HTML, CSS, JavaScript and ReactJs showcasing the simplicity and effectiveness of frontend web technologies.
 
 #### Features:
 - **Meme Template Selection**: Users can select from a variety of popular meme templates to start creating their memes.
